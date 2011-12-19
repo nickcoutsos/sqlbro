@@ -155,7 +155,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql)) {
 		echo '<tr>';
 		echo '<td><div class="item column1">' . $structureRow['Field'] . '</div></td>';
 		echo '<td><div class="item column2">' . $structureRow['Type'] . '</div></td>';
-		echo '<td><div class="item column3">' . $structureRow['Default'] . '</div></td>';
+		echo '<td><div class="item column3">' . (is_null($structureRow['Default']) ? '<em>Null</em>' : $structureRow['Default']) . '</div></td>';
 		echo '</tr>';
 		echo '</table>';
 		echo '</div>';
