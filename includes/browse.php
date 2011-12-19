@@ -349,7 +349,7 @@ if (isset($dbError)) {
 				}
 				echo '" fieldname="' . $fieldList[$i] . '">';
 				
-				if (is_null($daraRow[$i])) {
+				if (is_null($dataRow[$i])) {
 					echo '<em>Null</em>';
 				} else if (isset($tableTypes) && in_array($tableTypes[$i], $binaryDTs)) {
 					echo '<span class="binary">(' . __("binary data") . ')</span>';
